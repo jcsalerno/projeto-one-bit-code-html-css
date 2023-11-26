@@ -121,11 +121,33 @@ a {
 }
 
 .gallery__img-wrapper + .gallery__img-wrapper {
-  margin-left: 1rem;
-  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-top: 3rem;
 }
 
 .gallery__img-wrapper:nth-child(even) > .gallery__img {
   top: 1rem;
   transform: rotate(2deg);
+}
+
+.gallery__img-wrapper::after {
+  content: "";
+  background-color: rgb(228, 26, 26);
+  border-radius: 999px;
+  display: block;
+  height: 1.25rem;
+  width: 1.25rem;
+  position: absolute;
+  top: 0.25rem;
+  right: 1rem;
+}
+
+.gallery__img-wrapper:nth-child(even)::after {
+  left: 1rem;
+}
+
+.footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
 }
